@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tweedehands Japanse Hybride Auto's — Keuzegids</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+        :root {
+            --ink: #222222;
+            --ink-2: #484848;
+            --ink-3: #6a6a6a;
+            --ink-muted: #717171;
+            --paper: #ffffff;
+            --white: #ffffff;
+            --bg: #f7f7f7;
+            --green: #008a05;
+            --green-bg: #e8f5e9;
+            --red: #c13515;
+            --red-bg: #fef0ec;
+            --accent: #222222;
+            --border: #dddddd;
+            --border-light: #ebebeb;
+            --tag: #f0f0f0;
+            --shadow: 0 1px 2px rgba(0,0,0,0.04), 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--ink);
+            line-height: 1.6;
+            background: var(--paper);
+            font-weight: 400;
+            font-size: 15px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        a { color: var(--ink); text-decoration: underline; text-underline-offset: 2px; }
+        a:hover { color: var(--ink-2); }
+
+        .container { max-width: 820px; margin: 0 auto; padding: 0 24px; }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: var(--paper);
+            color: var(--ink);
+            padding: 36px 24px 28px;
+            text-align: left;
+            max-width: 820px;
+            margin: 0 auto;
+            border-bottom: 1px solid var(--border);
+        }
+        .hero::after { display: none; }
+        .hero h1 { font-size: 1.6em; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 4px; }
+        .hero .subtitle { font-size: 0.85em; color: var(--ink-muted); font-weight: 400; margin-bottom: 12px; text-transform: none; letter-spacing: 0; opacity: 1; }
+        .hero .budget-badge {
+            display: inline-block;
+            background: var(--green-bg);
+            color: var(--green);
+            border: none;
+            border-radius: 8px;
+            padding: 8px 18px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.9em;
+            font-weight: 700;
+        }
+        .hero .date { margin-top: 12px; font-size: 0.78em; color: var(--ink-muted); font-weight: 400; opacity: 1; letter-spacing: 0; text-transform: none; }
+
+        /* ===== SECTION HEADERS ===== */
+        .section-header { padding: 40px 0 12px; margin: 0 0 16px 0; border-bottom: 1px solid var(--border-light); }
+        .section-header h2 { font-size: 1.35em; font-weight: 700; letter-spacing: -0.02em; }
+        .section-header p { color: var(--ink-muted); font-size: 0.85em; margin-top: 2px; }
+
+        /* ===== TRADE-IN CARD ===== */
+        .tradein-card { background: var(--paper); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin: 0 0 20px 0; box-shadow: none; }
+        .tradein-card .car-name { font-size: 1.2em; font-weight: 700; }
+        .tradein-card .plate { display: inline-block; background: #f5d000; color: var(--ink); font-weight: 700; font-size: 0.9em; padding: 4px 14px; border-radius: 4px; margin: 8px 0; border: 2px solid var(--ink); letter-spacing: 1.5px; }
+        .tradein-specs { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1px; margin: 16px 0; background: var(--border-light); border-radius: 8px; overflow: hidden; }
+        .tradein-spec { background: var(--paper); padding: 10px 14px; }
+        .tradein-spec .label { font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-muted); font-weight: 600; }
+        .tradein-spec .value { font-size: 0.9em; font-weight: 600; color: var(--ink); margin-top: 2px; }
+        .value-box { background: var(--green-bg); border-radius: 8px; padding: 18px 20px; margin-top: 16px; }
+        .value-box h4 { font-size: 0.72em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--green); margin-bottom: 8px; }
+        .value-range { display: flex; gap: 20px; flex-wrap: wrap; }
+        .value-range .range-item { flex: 1; min-width: 180px; }
+        .value-range .range-label { font-size: 0.8em; color: var(--ink-3); }
+        .value-range .range-value { font-size: 1.25em; font-weight: 800; color: var(--green); }
+        .tip-box { background: var(--bg); border-left: 3px solid var(--ink-muted); padding: 12px 16px; margin-top: 14px; border-radius: 0 8px 8px 0; font-size: 0.86em; line-height: 1.6; }
+        .tip-box strong { color: var(--ink); font-weight: 700; }
+
+        /* ===== CAR CARDS ===== */
+        .car-card { background: var(--paper); border: 1px solid var(--border); border-radius: 12px; margin: 20px 0; overflow: hidden; box-shadow: none; }
+        .car-card-header { padding: 20px 24px; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px; border-bottom: 1px solid var(--border-light); }
+        .car-card-header.best-fit { border-left: 4px solid var(--green); }
+        .car-card-header.within-budget { border-left: 4px solid var(--ink-3); }
+        .car-card-header.over-budget { border-left: 4px solid var(--border); }
+        .car-title-block h3 { font-size: 1.15em; font-weight: 700; }
+        .car-title-block .type-badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 0.72em; font-weight: 600; background: var(--tag); color: var(--ink-2); margin-top: 4px; }
+        .budget-indicator { text-align: right; }
+        .budget-indicator .price-range { font-size: 1.05em; font-weight: 700; color: var(--ink); }
+        .best-fit .budget-indicator .price-range { color: var(--green); }
+        .budget-indicator .budget-status { font-size: 0.72em; color: var(--ink-muted); font-weight: 600; }
+        .best-fit .budget-indicator .budget-status { color: var(--green); }
+        .car-card-body { padding: 20px 24px; }
+
+        /* ===== SPECS GRID ===== */
+        .specs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; margin-bottom: 16px; background: var(--border-light); border-radius: 8px; overflow: hidden; }
+        .spec-item { background: var(--bg); padding: 10px 12px; }
+        .spec-item .spec-label { font-size: 0.66em; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-muted); font-weight: 600; }
+        .spec-item .spec-value { font-weight: 600; color: var(--ink); font-size: 0.88em; margin-top: 1px; }
+
+        /* ===== PROS & CONS ===== */
+        .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0; }
+        .pros, .cons { padding: 16px; border-radius: 8px; font-size: 0.86em; }
+        .pros { background: var(--green-bg); }
+        .cons { background: var(--red-bg); }
+        .pros h4, .cons h4 { font-size: 0.72em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
+        .pros h4 { color: var(--green); }
+        .cons h4 { color: var(--red); }
+        .pros ul, .cons ul { padding-left: 16px; line-height: 1.65; }
+        .pros li, .cons li { margin-bottom: 2px; }
+
+        /* ===== LISTINGS ===== */
+        .listings-section { margin-top: 16px; }
+        .listings-section h4 { font-size: 0.72em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-muted); margin-bottom: 8px; }
+        .listing { background: var(--bg); border-radius: 8px; padding: 10px 14px; margin-bottom: 4px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 4px; text-decoration: none; color: inherit; cursor: pointer; transition: background 0.2s; }
+        .listing:hover { background: var(--border-light); }
+        .listing .listing-details { font-size: 0.84em; color: var(--ink-2); }
+        .listing .listing-price { font-weight: 700; font-size: 0.95em; color: var(--ink); }
+        .listing .listing-arrow { color: var(--ink-muted); font-size: 0.9em; }
+        .listing a { color: var(--ink-2); font-size: 0.82em; }
+        .search-links { margin-top: 12px; padding: 10px 14px; background: var(--bg); border-radius: 8px; font-size: 0.84em; }
+        .search-links strong { font-weight: 600; color: var(--ink-2); }
+        .search-links a { color: var(--ink-2); margin-right: 10px; }
+
+        /* ===== VERDICT ===== */
+        .verdict { display: flex; align-items: center; gap: 14px; margin-top: 16px; padding: 14px 16px; border-radius: 8px; border: 1px solid var(--border); }
+        .verdict-score { min-width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.95em; font-weight: 800; color: white; flex-shrink: 0; }
+        .verdict-score.high { background: var(--green); }
+        .verdict-score.medium { background: var(--ink-3); }
+        .verdict-score.low { background: var(--ink-muted); }
+        .verdict-text { font-size: 0.86em; line-height: 1.55; }
+        .verdict-text strong { display: block; font-weight: 700; font-size: 0.95em; margin-bottom: 2px; }
+
+        /* ===== COMPARISON TABLE ===== */
+        .comparison-table { width: 100%; border-collapse: collapse; font-size: 0.82em; margin: 20px 0; }
+        .comparison-table th { background: var(--ink); color: white; padding: 10px 12px; text-align: left; font-weight: 600; font-size: 0.85em; }
+        .comparison-table th:first-child { border-radius: 8px 0 0 0; }
+        .comparison-table th:last-child { border-radius: 0 8px 0 0; }
+        .comparison-table td { padding: 9px 12px; border-bottom: 1px solid var(--border-light); color: var(--ink-2); }
+        .comparison-table tr:nth-child(even) { background: var(--bg); }
+        .comparison-table tr:nth-child(odd) { background: var(--paper); }
+        .comparison-table .highlight { background: var(--green-bg) !important; color: var(--green); font-weight: 700; }
+
+        /* ===== DEALER NOTES ===== */
+        .dealer-notes { background: var(--paper); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin: 20px 0; }
+        .dealer-notes h3 { font-size: 1.05em; font-weight: 700; margin-bottom: 12px; }
+
+        /* ===== FOOTER ===== */
+        .footer { text-align: center; padding: 36px 20px; color: var(--ink-muted); font-size: 0.78em; border-top: 1px solid var(--border-light); margin-top: 40px; }
+        .footer a { color: var(--ink-muted); }
+
+        /* ===== PHOTO GRID ===== */
+        .photo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; overflow: hidden; border-radius: 12px; margin-bottom: 0; }
+        .photo-grid .photo-main { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+        .photo-grid .photo-item { position: relative; overflow: hidden; background: var(--border-light); aspect-ratio: 3 / 2; }
+        .photo-grid .photo-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .photo-grid .photo-item:not(.photo-main) { cursor: pointer; }
+        .photo-grid .photo-item:hover img { transform: scale(1.03); }
+        .photo-grid .photo-item .photo-label { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 8px 5px; background: linear-gradient(transparent, rgba(0,0,0,0.4)); color: white; font-size: 0.65em; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0; transition: opacity 0.3s; }
+        .photo-grid .photo-item:hover .photo-label { opacity: 1; }
+
+        /* ===== REJECTED CARS ===== */
+        .rejected-list { display: flex; flex-direction: column; gap: 8px; margin: 16px 0; }
+        .rejected-item { display: flex; gap: 16px; background: var(--paper); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; align-items: stretch; }
+        .rejected-item .rejected-photo { width: 160px; min-height: 110px; flex-shrink: 0; overflow: hidden; background: var(--border-light); }
+        .rejected-item .rejected-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .rejected-item .rejected-info { padding: 14px 18px 14px 0; display: flex; flex-direction: column; justify-content: center; }
+        .rejected-item .rejected-name { font-size: 0.95em; font-weight: 700; margin-bottom: 1px; }
+        .rejected-item .rejected-price { font-size: 0.72em; font-weight: 600; color: var(--ink-muted); margin-bottom: 4px; }
+        .rejected-item .rejected-reason { font-size: 0.84em; color: var(--ink-2); line-height: 1.5; }
+        .rejected-item .rejected-reason strong { color: var(--red); font-weight: 700; }
+
+        /* ===== STARS ===== */
+        .stars { color: var(--ink); letter-spacing: 1px; }
+
+        /* ===== PRINT ===== */
+        @media print {
+            body { font-size: 11pt; }
+            .page-break { page-break-before: always; }
+            .car-card, .tradein-card, .rejected-item { box-shadow: none; border: 1px solid #ddd; }
+            .photo-grid .photo-main { aspect-ratio: 2 / 1; }
+            .photo-grid .photo-item { aspect-ratio: 3 / 2; }
+            .photo-grid .photo-item:hover img { transform: none; }
+            .photo-grid .photo-item .photo-label { display: none; }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.3em; }
+            .hero { padding: 28px 16px 20px; }
+            .pros-cons { grid-template-columns: 1fr; }
+            .specs-grid { grid-template-columns: 1fr 1fr; }
+            .container { padding: 0 16px; }
+            .car-card-body { padding: 16px; }
+            .car-card-header { padding: 14px 16px; }
+            .tradein-card { padding: 16px; }
+            .photo-grid { grid-template-columns: 1fr 1fr; border-radius: 8px; }
+            .photo-grid .photo-main { grid-column: 1 / -1; }
+            .comparison-table { font-size: 0.7em; }
+            .comparison-table th, .comparison-table td { padding: 6px 7px; }
+            .rejected-item { flex-direction: column; }
+            .rejected-item .rejected-photo { width: 100%; height: 150px; }
+            .rejected-item .rejected-info { padding: 12px 14px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ==================== COVER ==================== -->
+<div class="hero">
+    <h1>Japanse hybride occasion-gids</h1>
+    <p class="subtitle">Welke tweedehands Japanse hybride past bij jou?</p>
+    <div class="budget-badge">Budget &plusmn; &euro;20.500 (incl. inruil huidige auto)</div>
+    <p class="date">Februari 2026</p>
+</div>
+
+<div class="container">
+
+    <!-- ==================== INHOUDSOPGAVE ==================== -->
+    <div class="section-header" style="margin-top:25px;">
+        <h2>Inhoud</h2>
+    </div>
+    <div style="padding: 10px 20px; font-size:0.95em;">
+        <ol style="padding-left:20px; line-height:2.2;">
+            <li><strong>Jouw inruilauto</strong> &mdash; Honda CR-V 2006 (XX-XX-XX)</li>
+            <li><strong>Suzuki Vitara Smart Hybrid</strong> &mdash; Beste keuze binnen budget</li>
+            <li><strong>Toyota Yaris Cross Hybrid</strong> &mdash; Zuinigste optie, compact en betrouwbaar</li>
+            <li><strong>Honda HR-V e:HEV</strong> &mdash; Honda-kwaliteit, maar boven budget</li>
+            <li><strong>Mazda CX-30 e-Skyactiv X</strong> &mdash; Premium alternatief, net binnen budget</li>
+            <li><strong>Honda CR-V Hybrid</strong> &mdash; Droomauto, maar boven budget</li>
+            <li><strong>Vergelijkingstabel</strong> &mdash; Alles op een rij</li>
+            <li><strong>Niet aanbevolen</strong> &mdash; Andere Japanse hybrides en waarom niet</li>
+            <li><strong>Keuzehulp</strong> &mdash; Waar moet je op letten?</li>
+        </ol>
+    </div>
+
+    <!-- ==================== 1. INRUILAUTO ==================== -->
+    <div class="section-header">
+        <h2>1. Jouw Inruilauto</h2>
+        <p>Geschatte inruilwaarde om mee te rekenen</p>
+    </div>
+
+    <div class="tradein-card">
+        <div class="photo-grid" style="margin-bottom:20px;">
+            <div class="photo-item photo-main">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/2005-2006_Honda_CR-V_--_02-29-2012.JPG/1280px-2005-2006_Honda_CR-V_--_02-29-2012.JPG" alt="Honda CR-V 2006 - vooraanzicht" loading="lazy">
+                <div class="photo-label">Exterieur</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/05-06_Honda_CRV_Ph.JPG/1280px-05-06_Honda_CRV_Ph.JPG" alt="Honda CR-V 2006 - achteraanzicht" loading="lazy">
+                <div class="photo-label">Achterkant</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/05-06_Honda_CR-V.jpg/1280px-05-06_Honda_CR-V.jpg" alt="Honda CR-V 2006 - zijkant" loading="lazy">
+                <div class="photo-label">Zijkant</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/%2705-%2706_Honda_CR-V_EX.JPG/1280px-%2705-%2706_Honda_CR-V_EX.JPG" alt="Honda CR-V 2006 EX" loading="lazy">
+                <div class="photo-label">EX uitvoering</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/%2705_Honda_CR-V_EX.JPG/1280px-%2705_Honda_CR-V_EX.JPG" alt="Honda CR-V 2005 EX" loading="lazy">
+                <div class="photo-label">Vooraanzicht</div>
+            </div>
+        </div>
+        <div class="car-name">Honda CR-V 2.0i ES (2006)</div>
+        <div><span class="plate">XX-XX-XX</span></div>
+
+        <div class="tradein-specs">
+            <div class="tradein-spec">
+                <div class="label">Bouwjaar</div>
+                <div class="value">September 2006</div>
+            </div>
+            <div class="tradein-spec">
+                <div class="label">Kilometerstand</div>
+                <div class="value">175.000 km</div>
+            </div>
+            <div class="tradein-spec">
+                <div class="label">Transmissie</div>
+                <div class="value">Automaat 5-bak</div>
+            </div>
+            <div class="tradein-spec">
+                <div class="label">Aandrijving</div>
+                <div class="value">4WD</div>
+            </div>
+            <div class="tradein-spec">
+                <div class="label">Motor</div>
+                <div class="value">2.0L benzine, 150 pk</div>
+            </div>
+            <div class="tradein-spec">
+                <div class="label">APK geldig tot</div>
+                <div class="value">9 oktober 2026</div>
+            </div>
+            <div class="tradein-spec">
+                <div class="label">Eigenaren</div>
+                <div class="value">2</div>
+            </div>
+            <div class="tradein-spec">
+                <div class="label">Staat</div>
+                <div class="value">Netjes, compleet onderhoud</div>
+            </div>
+        </div>
+
+        <div class="value-box">
+            <h4>Geschatte waarde</h4>
+            <div class="value-range">
+                <div class="range-item">
+                    <div class="range-label">Inruil bij dealer</div>
+                    <div class="range-value">&euro;2.500 &ndash; &euro;3.500</div>
+                </div>
+                <div class="range-item">
+                    <div class="range-label">Particuliere verkoop</div>
+                    <div class="range-value">&euro;4.500 &ndash; &euro;5.500</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <strong>Tip:</strong> Overweeg om de auto eerst particulier te verkopen op Marktplaats (vraagprijs &euro;5.000&ndash;&euro;5.500). Dat levert tot &euro;2.000 meer op dan inruil bij de dealer. Vergelijkbare exemplaren met m&eacute;&eacute;r km staan bij dealers voor &euro;3.950&ndash;&euro;4.850. Jouw automaat met lage km-stand (175.000 bij 20 jaar = ca. 9.200 km/jaar) en complete onderhoudshistorie is meer waard.
+        </div>
+        <div class="tip-box" style="margin-top:8px; background: #ebf8ff; border-left-color: var(--primary-light);">
+            <strong>Let op:</strong> De wegenbelasting is ca. &euro;261 per kwartaal (&euro;1.044/jaar) door het hogere gewicht en CO2-uitstoot (Euro 4, 221 g/km). Vermeld bij verkoop dat de APK nog geldig is tot oktober 2026.
+        </div>
+    </div>
+
+    <!-- ==================== 2. SUZUKI VITARA ==================== -->
+    <div class="page-break"></div>
+    <div class="section-header">
+        <h2>2. Suzuki Vitara Smart Hybrid</h2>
+        <p>Makkelijkste match op prijs &mdash; Beste keuze binnen budget</p>
+    </div>
+
+    <div class="car-card">
+        <div class="car-card-header best-fit">
+            <div>
+                <div class="car-title-block">
+                    <h3>Suzuki Vitara 1.4 Boosterjet Smart Hybrid</h3>
+                    <span class="type-badge">48V Mild Hybrid &bull; 2020&ndash;2022</span>
+                </div>
+            </div>
+            <div class="budget-indicator">
+                <div class="price-range">&euro;17.000 &ndash; &euro;21.500</div>
+                <div class="budget-status">Ruim binnen budget</div>
+            </div>
+        </div>
+        <div class="photo-grid">
+            <div class="photo-item photo-main">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/2020_Suzuki_Vitara_GLX_2WD_with_Hikarii_bodykit_front_view_in_Brunei.jpg/1280px-2020_Suzuki_Vitara_GLX_2WD_with_Hikarii_bodykit_front_view_in_Brunei.jpg" alt="Suzuki Vitara Hybrid 2020 - vooraanzicht" loading="lazy">
+                <div class="photo-label">Exterieur</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/2019_Suzuki_Vitara_facelift_Rear.jpg/1280px-2019_Suzuki_Vitara_facelift_Rear.jpg" alt="Suzuki Vitara Hybrid 2020 - achteraanzicht" loading="lazy">
+                <div class="photo-label">Achterkant</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Suzuki_Vitara_1.6_GLX_AWD_2020_%281%29.jpg/1280px-Suzuki_Vitara_1.6_GLX_AWD_2020_%281%29.jpg" alt="Suzuki Vitara Hybrid 2020 - zijkant" loading="lazy">
+                <div class="photo-label">Zijkant</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/2020_Suzuki_Vitara_GLX_2WD_with_Hikarii_bodykit_interior_in_Brunei.jpg/1280px-2020_Suzuki_Vitara_GLX_2WD_with_Hikarii_bodykit_interior_in_Brunei.jpg" alt="Suzuki Vitara Hybrid 2020 - interieur" loading="lazy">
+                <div class="photo-label">Interieur</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/2019_Suzuki_Vitara_facelift_Front.jpg/1280px-2019_Suzuki_Vitara_facelift_Front.jpg" alt="Suzuki Vitara Hybrid 2020 - dashboard" loading="lazy">
+                <div class="photo-label">Dashboard</div>
+            </div>
+        </div>
+        <div class="car-card-body">
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <div class="spec-label">Motor</div>
+                    <div class="spec-value">1.4L Turbo + 48V</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Vermogen</div>
+                    <div class="spec-value">129 pk</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Verbruik</div>
+                    <div class="spec-value">5,4 L/100km</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Transmissie</div>
+                    <div class="spec-value">6-bak handgeschakeld of automaat</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Kofferbak</div>
+                    <div class="spec-value">375 liter</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Veiligheid</div>
+                    <div class="spec-value"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Euro NCAP</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">4WD optie</div>
+                    <div class="spec-value">AllGrip beschikbaar</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Trekgewicht</div>
+                    <div class="spec-value">1.200 kg</div>
+                </div>
+            </div>
+
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>Voordelen</h4>
+                    <ul>
+                        <li>Mild hybrid werkt goed in de praktijk (~5 L/100km)</li>
+                        <li>Suzuki betrouwbaarheid is uitstekend</li>
+                        <li>AllGrip 4WD beschikbaar (uniek in dit segment)</li>
+                        <li>Ruime standaarduitrusting</li>
+                        <li>Laagste occasionprijzen van het lijstje</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h4>Nadelen</h4>
+                    <ul>
+                        <li>Design valt niet bij iedereen in de smaak</li>
+                        <li>Interieur voelt gedateerd (harde kunststoffen)</li>
+                        <li>Automaat schakelt houterig</li>
+                        <li>Matige geluidsisolatie op snelweg</li>
+                        <li>Compacter dan de CR-V die je gewend bent</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="listings-section">
+                <h4>Aanbevolen occasions (februari 2026)</h4>
+                <a href="https://www.autouncle.nl/nl-nl/tot-ziens/viabovag-core-nl/12672906/27318004" target="_blank" rel="noopener" class="listing">
+                    <div class="listing-details">
+                        <strong>2020</strong> &bull; 1.4 S AllGrip <strong>(4x4!)</strong> &bull; 114.683 km &bull; Automaat &bull; Eefde
+                    </div>
+                    <div class="listing-price">&euro;16.899</div>
+                    <span class="listing-arrow">&rsaquo;</span>
+                </a>
+                <a href="https://www.autouncle.nl/nl-nl/tot-ziens/viabovag-core-nl/11911636/25549463" target="_blank" rel="noopener" class="listing">
+                    <div class="listing-details">
+                        <strong>2020</strong> &bull; Select Hybrid &bull; 100.776 km &bull; Automaat &bull; Ridderkerk
+                    </div>
+                    <div class="listing-price">&euro;18.945</div>
+                    <span class="listing-arrow">&rsaquo;</span>
+                </a>
+                <a href="https://www.autouncle.nl/nl-nl/tot-ziens/viabovag-core-nl/12995931/28119927" target="_blank" rel="noopener" class="listing">
+                    <div class="listing-details">
+                        <strong>2022</strong> &bull; 1.5 Full Hybrid &bull; 36.246 km &bull; Automaat &bull; Veenendaal
+                    </div>
+                    <div class="listing-price">&euro;23.450</div>
+                    <span class="listing-arrow">&rsaquo;</span>
+                </a>
+            </div>
+
+            <div class="search-links">
+                <strong>Zelf zoeken:</strong>
+                <a href="https://www.viabovag.nl/auto/merk-suzuki/model-vitara/hybride" target="_blank" rel="noopener">viaBOVAG.nl</a>
+                <a href="https://www.autoscout24.nl/lst/suzuki/vitara/ve_hybrid" target="_blank" rel="noopener">AutoScout24</a>
+                <a href="https://www.autouncle.nl/nl-nl/gebruikte-auto/Suzuki/Vitara" target="_blank" rel="noopener">AutoUncle</a>
+            </div>
+
+            <div class="verdict">
+                <div class="verdict-score high">9/10</div>
+                <div class="verdict-text">
+                    <strong>Beste keuze binnen budget</strong>
+                    Meeste aanbod, scherpste prijzen, betrouwbaar merk. Met AllGrip ook als 4x4 verkrijgbaar. Vergelijkbaar formaat als een compacte SUV. Perfecte vervanger als je iets zuinigers en moderner wilt dan de huidige CR-V.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== 3. TOYOTA YARIS CROSS ==================== -->
+    <div class="page-break"></div>
+    <div class="section-header">
+        <h2>3. Toyota Yaris Cross Hybrid</h2>
+        <p>Zuinigste optie &mdash; compact en betrouwbaar</p>
+    </div>
+
+    <div class="car-card">
+        <div class="car-card-header over-budget">
+            <div>
+                <div class="car-title-block">
+                    <h3>Toyota Yaris Cross 1.5 Hybrid</h3>
+                    <span class="type-badge">Full Hybrid &bull; 2021&ndash;2023</span>
+                </div>
+            </div>
+            <div class="budget-indicator">
+                <div class="price-range">&euro;22.500 &ndash; &euro;27.500</div>
+                <div class="budget-status">Boven budget (&euro;2.000+)</div>
+            </div>
+        </div>
+        <div class="photo-grid">
+            <div class="photo-item photo-main">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Toyota_Yaris_Cross_Hybrid_Automesse_Ludwigsburg_2022_1X7A5989.jpg/1280px-Toyota_Yaris_Cross_Hybrid_Automesse_Ludwigsburg_2022_1X7A5989.jpg" alt="Toyota Yaris Cross Hybrid - vooraanzicht" loading="lazy">
+                <div class="photo-label">Exterieur</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/2020-2024_Toyota_Yaris_Cross_Hybrid_Z_rear.jpg/1280px-2020-2024_Toyota_Yaris_Cross_Hybrid_Z_rear.jpg" alt="Toyota Yaris Cross Hybrid - achteraanzicht" loading="lazy">
+                <div class="photo-label">Achterkant</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Toyota_Yaris_Cross_Hybrid_%28XP210%29_1X7A1846.jpg/1280px-Toyota_Yaris_Cross_Hybrid_%28XP210%29_1X7A1846.jpg" alt="Toyota Yaris Cross Hybrid - zijkant" loading="lazy">
+                <div class="photo-label">Zijkant</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Toyota_Yaris_Cross_Hybrid_Leonberg_2022_1X7A0556.jpg/1280px-Toyota_Yaris_Cross_Hybrid_Leonberg_2022_1X7A0556.jpg" alt="Toyota Yaris Cross Hybrid - interieur" loading="lazy">
+                <div class="photo-label">Interieur</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Toyota_Yaris_Cross_Hybrid_Leonberg_2022_1X7A0555.jpg/1280px-Toyota_Yaris_Cross_Hybrid_Leonberg_2022_1X7A0555.jpg" alt="Toyota Yaris Cross Hybrid - dashboard" loading="lazy">
+                <div class="photo-label">Dashboard</div>
+            </div>
+        </div>
+        <div class="car-card-body">
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <div class="spec-label">Motor</div>
+                    <div class="spec-value">1.5L 3-cil + e-motor</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Vermogen</div>
+                    <div class="spec-value">116 pk</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Verbruik</div>
+                    <div class="spec-value">~4,8 L/100km</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Transmissie</div>
+                    <div class="spec-value">Automaat (e-CVT)</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Kofferbak</div>
+                    <div class="spec-value">390 liter</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Veiligheid</div>
+                    <div class="spec-value"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Euro NCAP</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Aandrijving</div>
+                    <div class="spec-value">FWD of AWD-i</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Trekgewicht</div>
+                    <div class="spec-value">750 kg</div>
+                </div>
+            </div>
+
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>Voordelen</h4>
+                    <ul>
+                        <li>Zuinigste auto van het lijstje (~4,8 L/100km)</li>
+                        <li>Toyota-betrouwbaarheid, tot 10 jaar garantie</li>
+                        <li>Full hybrid: rijdt in de stad tot 80% elektrisch</li>
+                        <li>5 Euro NCAP sterren</li>
+                        <li>AWD-i optioneel (elektrische achteras)</li>
+                        <li>Automaat (e-CVT) standaard</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h4>Nadelen</h4>
+                    <ul>
+                        <li>Boven budget (&euro;22.500+)</li>
+                        <li>Compact formaat, flinke stap terug t.o.v. CR-V</li>
+                        <li>Interieur voelt goedkoop (harde kunststoffen)</li>
+                        <li>Motor brult bij vol gas (CVT-effect)</li>
+                        <li>Diefstalrisico Toyota-hybrides (minder dan RAV4)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="listings-section">
+                <h4>Aanbevolen occasions (februari 2026)</h4>
+                <a href="https://www.autouncle.nl/nl-nl/tot-ziens/viabovag-nl/11719813/25184322" target="_blank" rel="noopener" class="listing">
+                    <div class="listing-details">
+                        <strong>2023</strong> &bull; Dynamic 116pk &bull; 101.695 km &bull; Wateringen &bull; BOVAG
+                    </div>
+                    <div class="listing-price">&euro;22.940</div>
+                    <span class="listing-arrow">&rsaquo;</span>
+                </a>
+                <a href="https://www.autouncle.nl/nl-nl/tot-ziens/viabovag-nl/11433954/24395321" target="_blank" rel="noopener" class="listing">
+                    <div class="listing-details">
+                        <strong>2022</strong> &bull; Limited 116pk &bull; 64.172 km &bull; Ridderkerk &bull; BOVAG
+                    </div>
+                    <div class="listing-price">&euro;24.400</div>
+                    <span class="listing-arrow">&rsaquo;</span>
+                </a>
+                <a href="https://www.autouncle.nl/nl-nl/tot-ziens/viabovag-nl/12005640/25832793" target="_blank" rel="noopener" class="listing">
+                    <div class="listing-details">
+                        <strong>2023</strong> &bull; X-plore 116pk &bull; 41.142 km &bull; Herten &bull; BOVAG
+                    </div>
+                    <div class="listing-price">&euro;24.795</div>
+                    <span class="listing-arrow">&rsaquo;</span>
+                </a>
+            </div>
+
+            <div class="search-links">
+                <strong>Zelf zoeken:</strong>
+                <a href="https://www.autoscout24.nl/lst/toyota/yaris-cross/ve_hybrid" target="_blank" rel="noopener">AutoScout24</a>
+                <a href="https://www.marktplaats.nl/l/auto-s/toyota/q/yaris+cross/" target="_blank" rel="noopener">Marktplaats</a>
+                <a href="https://www.autouncle.nl/nl-nl/gebruikte-auto/Toyota/Yaris%20Cross" target="_blank" rel="noopener">AutoUncle</a>
+            </div>
+
+            <div class="verdict">
+                <div class="verdict-score medium">7/10</div>
+                <div class="verdict-text">
+                    <strong>Zuinig en betrouwbaar</strong>
+                    De zuinigste optie dankzij Toyota's full hybrid. Bewezen betrouwbaar met tot 10 jaar garantie. Compact formaat is ideaal voor de stad maar een stap terug qua ruimte t.o.v. de CR-V. Net boven budget &mdash; onderhandelen loont.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== 4. HONDA HR-V ==================== -->
+    <div class="page-break"></div>
+    <div class="section-header">
+        <h2>4. Honda HR-V e:HEV</h2>
+        <p>Honda-kwaliteit, maar boven budget</p>
+    </div>
+
+    <div class="car-card">
+        <div class="car-card-header over-budget">
+            <div>
+                <div class="car-title-block">
+                    <h3>Honda HR-V 1.5 e:HEV</h3>
+                    <span class="type-badge">Full Hybrid &bull; 2022&ndash;2023</span>
+                </div>
+            </div>
+            <div class="budget-indicator">
+                <div class="price-range">&euro;23.500 &ndash; &euro;28.000</div>
+                <div class="budget-status">Boven budget (&euro;3.000+)</div>
+            </div>
+        </div>
+        <div class="photo-grid">
+            <div class="photo-item photo-main">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/2023_Honda_HR-V_LX_AWD%2C_front_right%2C_11-13-2022.jpg/1280px-2023_Honda_HR-V_LX_AWD%2C_front_right%2C_11-13-2022.jpg" alt="Honda HR-V e:HEV - vooraanzicht" loading="lazy">
+                <div class="photo-label">Exterieur</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/2023_Honda_HR-V_LX_AWD%2C_rear_right%2C_11-13-2022.jpg/1280px-2023_Honda_HR-V_LX_AWD%2C_rear_right%2C_11-13-2022.jpg" alt="Honda HR-V e:HEV - achteraanzicht" loading="lazy">
+                <div class="photo-label">Achterkant</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Honda_HR-V_Hybrid_1X7A0388.jpg/1280px-Honda_HR-V_Hybrid_1X7A0388.jpg" alt="Honda HR-V e:HEV - zijkant" loading="lazy">
+                <div class="photo-label">Zijkant</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Honda_HR-V_Hybrid_1X7A0427.jpg/1280px-Honda_HR-V_Hybrid_1X7A0427.jpg" alt="Honda HR-V e:HEV - interieur" loading="lazy">
+                <div class="photo-label">Interieur</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/2022_Honda_HR-V_Elegance_I-MMD_CVT.jpg/1280px-2022_Honda_HR-V_Elegance_I-MMD_CVT.jpg" alt="Honda HR-V e:HEV - dashboard" loading="lazy">
+                <div class="photo-label">Dashboard</div>
+            </div>
+        </div>
+        <div class="car-card-body">
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <div class="spec-label">Motor</div>
+                    <div class="spec-value">1.5L + 2 e-motoren</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Vermogen</div>
+                    <div class="spec-value">131 pk</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Verbruik</div>
+                    <div class="spec-value">5,0 L/100km (praktijk)</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Transmissie</div>
+                    <div class="spec-value">e-CVT (automaat)</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Kofferbak</div>
+                    <div class="spec-value">319 liter</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Veiligheid</div>
+                    <div class="spec-value"><span class="stars">&#9733;&#9733;&#9733;&#9733;</span>&#9734; Euro NCAP</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Aandrijving</div>
+                    <div class="spec-value">Voorwielaandrijving</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Trekhaak</div>
+                    <div class="spec-value">Niet mogelijk!</div>
+                </div>
+            </div>
+
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>Voordelen</h4>
+                    <ul>
+                        <li>Zeer zuinig (~1 op 20 in de praktijk)</li>
+                        <li>Magic Seats (achterbank klapt omhoog)</li>
+                        <li>Rijdt als een EV in de stad (stil &amp; soepel)</li>
+                        <li>Automaat (e-CVT)</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h4>Nadelen</h4>
+                    <ul>
+                        <li>Boven budget (&euro;23.500+)</li>
+                        <li>Kleinste kofferbak (319L)</li>
+                        <li>Geen 4WD beschikbaar</li>
+                        <li>Motor luid bij vol gas</li>
+                        <li>Slechts 4 Euro NCAP sterren</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="listings-section">
+                <h4>Aanbevolen occasions (februari 2026)</h4>
+                <a href="https://www.autouncle.nl/nl-nl/tot-ziens/viabovag-core-nl/12890757/27851708" target="_blank" rel="noopener" class="listing">
+                    <div class="listing-details">
+                        <strong>2022</strong> &bull; e:HEV Advance &bull; 126.175 km &bull; Sneek &bull; BOVAG
+                    </div>
+                    <div class="listing-price">&euro;24.850</div>
+                    <span class="listing-arrow">&rsaquo;</span>
+                </a>
+                <a href="https://www.autouncle.nl/nl-nl/tot-ziens/viabovag-core-nl/10918853/24274347" target="_blank" rel="noopener" class="listing">
+                    <div class="listing-details">
+                        <strong>2022</strong> &bull; e:HEV Advance &bull; 44.650 km &bull; Oisterwijk &bull; BOVAG
+                    </div>
+                    <div class="listing-price">&euro;26.400</div>
+                    <span class="listing-arrow">&rsaquo;</span>
+                </a>
+                <a href="https://www.autouncle.nl/nl-nl/tot-ziens/nederlandmobiel-nl/12306396/26440606" target="_blank" rel="noopener" class="listing">
+                    <div class="listing-details">
+                        <strong>2022</strong> &bull; e:HEV Elegance &bull; 78.015 km &bull; Alkmaar
+                    </div>
+                    <div class="listing-price">&euro;26.950</div>
+                    <span class="listing-arrow">&rsaquo;</span>
+                </a>
+            </div>
+
+            <div class="search-links">
+                <strong>Zelf zoeken:</strong>
+                <a href="https://www.autoscout24.nl/lst/honda/hr-v" target="_blank" rel="noopener">AutoScout24</a>
+                <a href="https://www.marktplaats.nl/l/auto-s/honda/f/hr-v/818/" target="_blank" rel="noopener">Marktplaats</a>
+                <a href="https://www.autouncle.nl/nl-nl/gebruikte-auto/Honda/HR-V" target="_blank" rel="noopener">AutoUncle</a>
+            </div>
+
+            <div class="verdict">
+                <div class="verdict-score medium">6/10</div>
+                <div class="verdict-text">
+                    <strong>Leuk maar te duur</strong>
+                    Zuinigste auto van het lijstje en Honda-kwaliteit, maar &euro;3.000+ boven budget. Kleine kofferbak (319L) is een serieus minpunt. Alleen overwegen als het budget omhoog kan.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== 5. MAZDA CX-30 ==================== -->
+    <div class="page-break"></div>
+    <div class="section-header">
+        <h2>5. Mazda CX-30 e-Skyactiv X</h2>
+        <p>Premium gevoel, net binnen budget</p>
+    </div>
+
+    <div class="car-card">
+        <div class="car-card-header within-budget">
+            <div>
+                <div class="car-title-block">
+                    <h3>Mazda CX-30 2.0 e-Skyactiv X</h3>
+                    <span class="type-badge">Mild Hybrid &bull; 2020&ndash;2022</span>
+                </div>
+            </div>
+            <div class="budget-indicator">
+                <div class="price-range">&euro;19.900 &ndash; &euro;23.500</div>
+                <div class="budget-status">Net binnen budget</div>
+            </div>
+        </div>
+        <div class="photo-grid">
+            <div class="photo-item photo-main">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/2019_Mazda_CX-30_Sport_LUX_MHEV_Automatic_2.0_Front.jpg/1280px-2019_Mazda_CX-30_Sport_LUX_MHEV_Automatic_2.0_Front.jpg" alt="Mazda CX-30 2020 - vooraanzicht" loading="lazy">
+                <div class="photo-label">Exterieur</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Mazda_CX-30_%28DM%29_in_Slovakia_2020.jpg/1280px-Mazda_CX-30_%28DM%29_in_Slovakia_2020.jpg" alt="Mazda CX-30 2020 - achteraanzicht" loading="lazy">
+                <div class="photo-label">Achterkant</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Mazda_CX-30_IMG_3760.jpg/1280px-Mazda_CX-30_IMG_3760.jpg" alt="Mazda CX-30 2020 - zijkant" loading="lazy">
+                <div class="photo-label">Zijkant</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Mazda_CX-30_%28DM%29_Washington_DC_Metro_Area%2C_USA_%281%29.jpg/1280px-Mazda_CX-30_%28DM%29_Washington_DC_Metro_Area%2C_USA_%281%29.jpg" alt="Mazda CX-30 2020 - detail" loading="lazy">
+                <div class="photo-label">Detail</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/MAZDA_CX-30_CHINA_VERSION_INTERIOR.jpg/1280px-MAZDA_CX-30_CHINA_VERSION_INTERIOR.jpg" alt="Mazda CX-30 2020 - interieur" loading="lazy">
+                <div class="photo-label">Interieur</div>
+            </div>
+        </div>
+        <div class="car-card-body">
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <div class="spec-label">Motor</div>
+                    <div class="spec-value">2.0L Skyactiv-X + 24V</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Vermogen</div>
+                    <div class="spec-value">180 pk</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Verbruik</div>
+                    <div class="spec-value">~6,5 L/100km</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Transmissie</div>
+                    <div class="spec-value">6-bak automaat</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Kofferbak</div>
+                    <div class="spec-value">430 liter</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Veiligheid</div>
+                    <div class="spec-value"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Euro NCAP</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Aandrijving</div>
+                    <div class="spec-value">FWD of AWD</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Trekgewicht</div>
+                    <div class="spec-value">1.200 kg</div>
+                </div>
+            </div>
+
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>Voordelen</h4>
+                    <ul>
+                        <li>Premium interieurkwaliteit (beste van het lijstje)</li>
+                        <li>Prettig rijgedrag, stevig en sportief</li>
+                        <li>180 pk &mdash; krachtigste mild hybrid hier</li>
+                        <li>5 Euro NCAP sterren</li>
+                        <li>AWD optioneel beschikbaar</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h4>Nadelen</h4>
+                    <ul>
+                        <li>Skyactiv-X motor is complex (luchtcompressor kan stuk)</li>
+                        <li>Mild hybrid levert amper brandstofswinst</li>
+                        <li>Kofferbak goed (430L) maar kleiner dan CR-V</li>
+                        <li>Onderhoud iets duurder dan Suzuki</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="listings-section">
+                <h4>Aanbevolen occasions (februari 2026)</h4>
+                <a href="https://occasion.mazda.nl/mazda-cx-30/mazda/cx-30/180pk-automaat-leer-camera-schuifdak-trekhaak_occasion_g-167-ps-locatie-rotterdam-ommoord/benzine/2493029" target="_blank" rel="noopener" class="listing">
+                    <div class="listing-details">
+                        <strong>2019</strong> &bull; 180pk Luxury automaat &bull; 115.071 km &bull; Rotterdam
+                    </div>
+                    <div class="listing-price">&euro;20.750</div>
+                    <span class="listing-arrow">&rsaquo;</span>
+                </a>
+                <a href="https://www.autouncle.nl/nl-nl/tot-ziens/viabovag-core-nl/12969454/28048312" target="_blank" rel="noopener" class="listing">
+                    <div class="listing-details">
+                        <strong>2021</strong> &bull; Comfort e-Skyactiv-X automaat &bull; 117.924 km &bull; Dongen &bull; BOVAG
+                    </div>
+                    <div class="listing-price">&euro;21.400</div>
+                    <span class="listing-arrow">&rsaquo;</span>
+                </a>
+                <a href="https://www.autouncle.nl/nl-nl/tot-ziens/viabovag-core-nl/11078201/23575374" target="_blank" rel="noopener" class="listing">
+                    <div class="listing-details">
+                        <strong>2022</strong> &bull; Luxury e-Skyactiv-X automaat &bull; 102.545 km &bull; Naaldwijk &bull; BOVAG
+                    </div>
+                    <div class="listing-price">&euro;23.450</div>
+                    <span class="listing-arrow">&rsaquo;</span>
+                </a>
+            </div>
+
+            <div class="search-links">
+                <strong>Zelf zoeken:</strong>
+                <a href="https://occasion.mazda.nl/mazda-cx-30" target="_blank" rel="noopener">Mazda Occasions</a>
+                <a href="https://www.autoscout24.nl/lst/mazda/cx-30" target="_blank" rel="noopener">AutoScout24</a>
+                <a href="https://www.autouncle.nl/nl-nl/gebruikte-auto/Mazda/CX-30" target="_blank" rel="noopener">AutoUncle</a>
+            </div>
+
+            <div class="verdict">
+                <div class="verdict-score medium">7/10</div>
+                <div class="verdict-text">
+                    <strong>Premium alternatief</strong>
+                    Het mooiste interieur en het sportiekste rijgedrag van het lijstje. Net binnen budget als je een exemplaar met wat meer km accepteert. Let op de complexe Skyactiv-X motor &mdash; vraag naar onderhoudshistorie.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== 6. HONDA CR-V HYBRID ==================== -->
+    <div class="page-break"></div>
+    <div class="section-header">
+        <h2>6. Honda CR-V Hybrid</h2>
+        <p>De droomauto &mdash; maar boven budget</p>
+    </div>
+
+    <div class="car-card">
+        <div class="car-card-header over-budget">
+            <div>
+                <div class="car-title-block">
+                    <h3>Honda CR-V 2.0 i-MMD Hybrid</h3>
+                    <span class="type-badge">Full Hybrid &bull; 2019&ndash;2021</span>
+                </div>
+            </div>
+            <div class="budget-indicator">
+                <div class="price-range">&euro;20.900 &ndash; &euro;35.000</div>
+                <div class="budget-status">Boven budget</div>
+            </div>
+        </div>
+        <div class="photo-grid">
+            <div class="photo-item photo-main">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/2020_Honda_CR-V_EX-L_AWD_%28facelift%29%2C_front_3.2.20.jpg/1280px-2020_Honda_CR-V_EX-L_AWD_%28facelift%29%2C_front_3.2.20.jpg" alt="Honda CR-V Hybrid 2020 - vooraanzicht" loading="lazy">
+                <div class="photo-label">Exterieur</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/2020_Honda_CR-V_EX-L_AWD_%28facelift%29%2C_rear_3.2.20.jpg/1280px-2020_Honda_CR-V_EX-L_AWD_%28facelift%29%2C_rear_3.2.20.jpg" alt="Honda CR-V Hybrid 2020 - achteraanzicht" loading="lazy">
+                <div class="photo-label">Achterkant</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Facelift_2020_Honda_CR-V.jpg/1280px-Facelift_2020_Honda_CR-V.jpg" alt="Honda CR-V Hybrid 2020 - zijkant" loading="lazy">
+                <div class="photo-label">Zijkant</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Facelift_2020_Honda_CR-V_rearview.jpg/1280px-Facelift_2020_Honda_CR-V_rearview.jpg" alt="Honda CR-V Hybrid 2020 - interieur" loading="lazy">
+                <div class="photo-label">Interieur</div>
+            </div>
+            <div class="photo-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/2020_Honda_CR-V_hybride_au_SIAM_2020.jpg/1280px-2020_Honda_CR-V_hybride_au_SIAM_2020.jpg" alt="Honda CR-V Hybrid 2020 - dashboard" loading="lazy">
+                <div class="photo-label">Dashboard</div>
+            </div>
+        </div>
+        <div class="car-card-body">
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <div class="spec-label">Motor</div>
+                    <div class="spec-value">2.0L + e-motor (i-MMD)</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Vermogen</div>
+                    <div class="spec-value">184 pk</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Verbruik</div>
+                    <div class="spec-value">~6,4 L/100km (praktijk)</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Transmissie</div>
+                    <div class="spec-value">e-CVT (automaat)</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Kofferbak</div>
+                    <div class="spec-value">497 liter</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Veiligheid</div>
+                    <div class="spec-value"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Euro NCAP</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Aandrijving</div>
+                    <div class="spec-value">FWD of AWD</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">Trekgewicht</div>
+                    <div class="spec-value">750 kg (beperkt!)</div>
+                </div>
+            </div>
+
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>Voordelen</h4>
+                    <ul>
+                        <li>Ruimste kofferbak (497L)</li>
+                        <li>Meeste vermogen (184 pk)</li>
+                        <li>5 Euro NCAP sterren (93% volwassenen)</li>
+                        <li>Honda betrouwbaarheid (9.1/10)</li>
+                        <li>Soepel hybrid-systeem</li>
+                        <li>Bekende auto (opvolger van je huidige!)</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h4>Nadelen</h4>
+                    <ul>
+                        <li>Duidelijk boven budget (&euro;20.900+)</li>
+                        <li>Verbruik hoger dan Honda HR-V</li>
+                        <li>Besturing zonder gevoel</li>
+                        <li>Verbruik stijgt in de winter</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="listings-section">
+                <h4>Goedkoopste gevonden (februari 2026)</h4>
+                <a href="https://www.autouncle.nl/nl-nl/tot-ziens/viabovag-core-nl/12350404/26556605" target="_blank" rel="noopener" class="listing">
+                    <div class="listing-details">
+                        <strong>2019</strong> &bull; Elegance Hybrid &bull; 79.749 km &bull; Alphen a/d Rijn &bull; BOVAG
+                    </div>
+                    <div class="listing-price">&euro;25.700</div>
+                    <span class="listing-arrow">&rsaquo;</span>
+                </a>
+                <a href="https://www.autouncle.nl/nl-nl/tot-ziens/viabovag-core-nl/11420434/24356432" target="_blank" rel="noopener" class="listing">
+                    <div class="listing-details">
+                        <strong>2019</strong> &bull; Lifestyle Hybrid &bull; 46.686 km &bull; Tilburg &bull; BOVAG
+                    </div>
+                    <div class="listing-price">&euro;28.945</div>
+                    <span class="listing-arrow">&rsaquo;</span>
+                </a>
+                <a href="https://www.autouncle.nl/nl-nl/tot-ziens/nederlandmobiel-nl/12493740/26910731" target="_blank" rel="noopener" class="listing">
+                    <div class="listing-details">
+                        <strong>2020</strong> &bull; Executive Hybrid AWD &bull; 68.428 km &bull; Purmerend
+                    </div>
+                    <div class="listing-price">&euro;29.839</div>
+                    <span class="listing-arrow">&rsaquo;</span>
+                </a>
+            </div>
+
+            <div class="search-links">
+                <strong>Zelf zoeken:</strong>
+                <a href="https://www.autoscout24.nl/lst/honda/cr-v/ve_hybrid" target="_blank" rel="noopener">AutoScout24</a>
+                <a href="https://www.marktplaats.nl/l/auto-s/honda/f/cr-v/816/" target="_blank" rel="noopener">Marktplaats</a>
+                <a href="https://www.autouncle.nl/nl-nl/gebruikte-auto/Honda/CR-V" target="_blank" rel="noopener">AutoUncle</a>
+            </div>
+
+            <div class="verdict">
+                <div class="verdict-score low">4/10</div>
+                <div class="verdict-text">
+                    <strong>Droomauto, maar onhaalbaar</strong>
+                    De logische opvolger van je huidige CR-V. Helaas begint zelfs het allergoedkoopste exemplaar (2019, 100.000+ km) net boven &euro;20.500. Alleen haalbaar als je de oude auto particulier verkoopt voor &euro;4.000+ en het budget kunt oprekken.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== 7. VERGELIJKINGSTABEL ==================== -->
+    <div class="page-break"></div>
+    <div class="section-header">
+        <h2>7. Alles op een rij</h2>
+        <p>Vergelijk alle auto's in &eacute;&eacute;n overzicht</p>
+    </div>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Eigenschap</th>
+                <th>Suzuki Vitara</th>
+                <th>Yaris Cross</th>
+                <th>Honda HR-V</th>
+                <th>Mazda CX-30</th>
+                <th>Honda CR-V</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Hybride type</strong></td>
+                <td>Mild (48V)</td>
+                <td>Full hybrid</td>
+                <td>Full hybrid</td>
+                <td>Mild (24V)</td>
+                <td>Full hybrid</td>
+            </tr>
+            <tr>
+                <td><strong>Bouwjaren (budget)</strong></td>
+                <td class="highlight">2020&ndash;2022</td>
+                <td>2021&ndash;2023</td>
+                <td>2022&ndash;2023</td>
+                <td>2020&ndash;2022</td>
+                <td>2019&ndash;2021</td>
+            </tr>
+            <tr>
+                <td><strong>Prijsrange</strong></td>
+                <td class="highlight">&euro;17k&ndash;21,5k</td>
+                <td>&euro;22,5k&ndash;27,5k</td>
+                <td>&euro;23,5k&ndash;28k</td>
+                <td>&euro;19,9k&ndash;23,5k</td>
+                <td>&euro;20,9k&ndash;35k</td>
+            </tr>
+            <tr>
+                <td><strong>Binnen budget?</strong></td>
+                <td class="highlight">Ja, ruim</td>
+                <td>Nee</td>
+                <td>Nee</td>
+                <td>Krap</td>
+                <td>Nee</td>
+            </tr>
+            <tr>
+                <td><strong>Vermogen</strong></td>
+                <td>129 pk</td>
+                <td>116 pk</td>
+                <td>131 pk</td>
+                <td class="highlight">180 pk</td>
+                <td class="highlight">184 pk</td>
+            </tr>
+            <tr>
+                <td><strong>Verbruik</strong></td>
+                <td>5,4 L/100km</td>
+                <td class="highlight">4,8 L/100km</td>
+                <td class="highlight">5,0 L/100km</td>
+                <td>6,5 L/100km</td>
+                <td>6,4 L/100km</td>
+            </tr>
+            <tr>
+                <td><strong>Kofferbak</strong></td>
+                <td>375 L</td>
+                <td>390 L</td>
+                <td>319 L</td>
+                <td class="highlight">430 L</td>
+                <td class="highlight">497 L</td>
+            </tr>
+            <tr>
+                <td><strong>Automaat</strong></td>
+                <td>Optioneel (AGS)</td>
+                <td class="highlight">Ja (e-CVT)</td>
+                <td class="highlight">Ja (e-CVT)</td>
+                <td class="highlight">Ja (6AT)</td>
+                <td class="highlight">Ja (e-CVT)</td>
+            </tr>
+            <tr>
+                <td><strong>4WD</strong></td>
+                <td>AllGrip (optie)</td>
+                <td>AWD-i (optie)</td>
+                <td>Nee</td>
+                <td>Optioneel</td>
+                <td>Optioneel</td>
+            </tr>
+            <tr>
+                <td><strong>Euro NCAP</strong></td>
+                <td>5 sterren</td>
+                <td>5 sterren</td>
+                <td>4 sterren</td>
+                <td>5 sterren</td>
+                <td>5 sterren</td>
+            </tr>
+            <tr>
+                <td><strong>Score</strong></td>
+                <td class="highlight"><strong>9/10</strong></td>
+                <td><strong>7/10</strong></td>
+                <td><strong>6/10</strong></td>
+                <td><strong>7/10</strong></td>
+                <td><strong>4/10</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="tip-box">
+        <strong>Onze aanbeveling:</strong> De <strong>Suzuki Vitara Smart Hybrid</strong> (met automaat) is de beste keuze binnen het budget. Veel aanbod, betrouwbaar merk, en met AllGrip ook als 4x4 te krijgen. De <strong>Toyota Yaris Cross Hybrid</strong> is het zuinigste alternatief met bewezen Toyota-betrouwbaarheid. De <strong>Mazda CX-30</strong> is het premium alternatief met meer vermogen en het mooiste interieur.
+    </div>
+
+    <!-- ==================== 8. NIET AANBEVOLEN ==================== -->
+    <div class="page-break"></div>
+    <div class="section-header">
+        <h2>8. Niet aanbevolen</h2>
+        <p>Andere Japanse hybrides die we hebben bekeken &mdash; en waarom ze afvallen</p>
+    </div>
+
+    <div class="rejected-list">
+        <div class="rejected-item">
+            <div class="rejected-photo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/2020_Toyota_RAV4_Hybrid_Limited_in_Silver_Sky_Metallic%2C_front_left.jpg/1280px-2020_Toyota_RAV4_Hybrid_Limited_in_Silver_Sky_Metallic%2C_front_left.jpg" alt="Toyota RAV4 Hybrid" loading="lazy">
+            </div>
+            <div class="rejected-info">
+                <div class="rejected-name">Toyota RAV4 Hybrid</div>
+                <div class="rejected-price">Occasion vanaf &euro;25.000 &bull; 2019&ndash;2024</div>
+                <div class="rejected-reason"><strong>Meest gestolen auto van Nederland.</strong> 387 diefstallen in 2025 (+13%), al jaren op #1. Extreem hoog diefstalrisico betekent hogere verzekeringspremie. Daarnaast boven budget &mdash; betaalbare exemplaren hebben hoge km-standen.</div>
+            </div>
+        </div>
+
+        <div class="rejected-item">
+            <div class="rejected-photo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/2020_Toyota_C-HR_Design_HEV_CVT_2.0_Front.jpg/1280px-2020_Toyota_C-HR_Design_HEV_CVT_2.0_Front.jpg" alt="Toyota C-HR Hybrid" loading="lazy">
+            </div>
+            <div class="rejected-info">
+                <div class="rejected-name">Toyota C-HR Hybrid</div>
+                <div class="rejected-price">Occasion &euro;16.000&ndash;&euro;22.000 &bull; 2017&ndash;2023</div>
+                <div class="rejected-reason"><strong>Te onpraktisch &amp; diefstalgevoelig.</strong> Kleine kofferbak (358L), krappe en donkere achterbank. Toyota-hybrides staan bovenaan de diefstallijsten. Het coup&eacute;-achtige design gaat ten koste van dagelijks gebruik &mdash; flinke stap terug qua ruimte t.o.v. een CR-V.</div>
+            </div>
+        </div>
+
+        <div class="rejected-item">
+            <div class="rejected-photo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Suzuki_SX4_S-Cross_1.6_GL_2020_%2853280972266%29.jpg/1280px-Suzuki_SX4_S-Cross_1.6_GL_2020_%2853280972266%29.jpg" alt="Suzuki S-Cross Hybrid" loading="lazy">
+            </div>
+            <div class="rejected-info">
+                <div class="rejected-name">Suzuki S-Cross Hybrid</div>
+                <div class="rejected-price">Occasion &euro;17.500&ndash;&euro;21.000 &bull; 2020&ndash;2022</div>
+                <div class="rejected-reason"><strong>Geen automaat beschikbaar.</strong> De 1.4 mild hybrid is alleen handgeschakeld. Prima auto met grote kofferbak (430L) en scherpe prijs, maar valt af omdat een automaat vereist is. De nieuwere 1.5 Full Hybrid (2022+) heeft w&eacute;l automaat, maar begint pas rond &euro;22.500.</div>
+            </div>
+        </div>
+
+        <div class="rejected-item">
+            <div class="rejected-photo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Nissan_Qashqai_e-Power_Automesse_Ludwigsburg_2022_1X7A5924.jpg/1280px-Nissan_Qashqai_e-Power_Automesse_Ludwigsburg_2022_1X7A5924.jpg" alt="Nissan Qashqai e-Power" loading="lazy">
+            </div>
+            <div class="rejected-info">
+                <div class="rejected-name">Nissan Qashqai e-Power</div>
+                <div class="rejected-price">Occasion vanaf &euro;28.000 &bull; 2022+</div>
+                <div class="rejected-reason"><strong>Veel te duur als occasion.</strong> De e-Power (hybride) versie is pas sinds 2022 leverbaar en nog nauwelijks betaalbaar tweedehands. Minstens &euro;8.000 boven budget. De oudere niet-hybride Qashqai valt buiten de scope (geen hybride).</div>
+            </div>
+        </div>
+
+        <div class="rejected-item">
+            <div class="rejected-photo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/2019_Mitsubishi_Outlander_PHEV_in_Sterling_Silver_Metallic%2C_front_right.jpg/1280px-2019_Mitsubishi_Outlander_PHEV_in_Sterling_Silver_Metallic%2C_front_right.jpg" alt="Mitsubishi Outlander PHEV" loading="lazy">
+            </div>
+            <div class="rejected-info">
+                <div class="rejected-name">Mitsubishi Outlander PHEV</div>
+                <div class="rejected-price">Occasion &euro;10.000&ndash;&euro;20.000 &bull; 2014&ndash;2022</div>
+                <div class="rejected-reason"><strong>Zinloos zonder laadpaal.</strong> Dit is een plug-in hybride: zonder dagelijks opladen verbruikt hij 8&ndash;10 L/100km. Verouderde techniek, risico op accudegradatie bij oudere exemplaren. Alleen interessant als je thuis kunt laden.</div>
+            </div>
+        </div>
+
+        <div class="rejected-item">
+            <div class="rejected-photo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/2020_Subaru_Forester_%28base%29_in_Crystal_White%2C_front_right.jpg/1280px-2020_Subaru_Forester_%28base%29_in_Crystal_White%2C_front_right.jpg" alt="Subaru Forester e-Boxer" loading="lazy">
+            </div>
+            <div class="rejected-info">
+                <div class="rejected-name">Subaru Forester e-Boxer</div>
+                <div class="rejected-price">Occasion &euro;20.000&ndash;&euro;26.000 &bull; 2019&ndash;2021</div>
+                <div class="rejected-reason"><strong>Onzuinig, hybride in naam alleen.</strong> Verbruikt 7,5&ndash;8 L/100km in de praktijk &mdash; het hoogste van alle opties. De e-Boxer hybride voegt amper iets toe. Weinig aanbod binnen budget, vaak hoge km-standen.</div>
+            </div>
+        </div>
+
+        <div class="rejected-item">
+            <div class="rejected-photo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Lexus_UX_250h_1X7A0837.jpg/1280px-Lexus_UX_250h_1X7A0837.jpg" alt="Lexus UX 250h" loading="lazy">
+            </div>
+            <div class="rejected-info">
+                <div class="rejected-name">Lexus UX 250h</div>
+                <div class="rejected-price">Occasion vanaf &euro;24.000 &bull; 2019+</div>
+                <div class="rejected-reason"><strong>Boven budget, premium prijskaartje.</strong> Lexus-kwaliteit is uitstekend, maar de prijs ook. Kleine kofferbak (320L), beperkte achterbank. Onderhoud duurder dan bij andere Japanse merken. Qua formaat een stap terug t.o.v. de CR-V.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== 9. KEUZEHULP ==================== -->
+    <div class="page-break"></div>
+    <div class="section-header">
+        <h2>9. Keuzehulp</h2>
+        <p>Stel jezelf deze vragen om tot de beste keuze te komen</p>
+    </div>
+
+    <div class="dealer-notes">
+        <h3>Welke auto past bij jou?</h3>
+        <div style="font-size: 0.9em; line-height: 1.85; margin-top: 10px;">
+            <p style="margin-bottom: 14px;"><strong style="color: var(--accent);">Wil je 4WD?</strong><br>
+            Niet per se nodig, maar fijn in de winter of op onverharde wegen. De Suzuki Vitara AllGrip heeft standaard vierwielaandrijving. De Toyota Yaris Cross en Mazda CX-30 zijn optioneel met AWD te krijgen. De Honda HR-V is alleen voorwielaandrijving.</p>
+
+            <p style="margin-bottom: 14px;"><strong style="color: var(--accent);">Hoe belangrijk is de kofferbak?</strong><br>
+            Van groot naar klein: Honda CR-V (497L) &rsaquo; Mazda CX-30 (430L) &rsaquo; Yaris Cross (390L) &rsaquo; Vitara (375L) &rsaquo; HR-V (319L).</p>
+
+            <p style="margin-bottom: 14px;"><strong style="color: var(--accent);">Wil je strikt binnen budget blijven?</strong><br>
+            Alleen de Suzuki Vitara past comfortabel binnen &euro;20.500. De Mazda CX-30 is net haalbaar met wat meer km. De Yaris Cross, Honda HR-V en CR-V Hybrid zitten er (flink) boven.</p>
+
+            <p><strong style="color: var(--accent);">Kun je het budget oprekken?</strong><br>
+            Met &euro;3.000&ndash;&euro;5.000 extra wordt de Honda CR-V Hybrid bereikbaar &mdash; de logische opvolger van je huidige auto. Particuliere verkoop van de CR-V 2006 levert meer op dan inruil.</p>
+        </div>
+    </div>
+
+    <div class="tip-box" style="margin-top: 16px;">
+        <strong>Belangrijke checks bij de dealer:</strong> Vraag altijd naar de onderhoudshistorie, controleer het kenteken op <a href="https://ovi.rdw.nl">ovi.rdw.nl</a> (APK-historie en km-stand), vraag naar de staat van de hybride-accu, en kies bij voorkeur een BOVAG-dealer (minimaal 6 maanden garantie).
+    </div>
+
+
+</div>
+
+<script>
+document.querySelectorAll('.photo-grid').forEach(function(grid) {
+    var main = grid.querySelector('.photo-main');
+    grid.querySelectorAll('.photo-item:not(.photo-main)').forEach(function(thumb) {
+        thumb.addEventListener('click', function() {
+            var mImg = main.querySelector('img'), tImg = thumb.querySelector('img');
+            var mLabel = main.querySelector('.photo-label'), tLabel = thumb.querySelector('.photo-label');
+            var s = mImg.src; mImg.src = tImg.src; tImg.src = s;
+            var a = mImg.alt; mImg.alt = tImg.alt; tImg.alt = a;
+            if (mLabel && tLabel) { var l = mLabel.textContent; mLabel.textContent = tLabel.textContent; tLabel.textContent = l; }
+        });
+    });
+});
+</script>
+</body>
+</html>
